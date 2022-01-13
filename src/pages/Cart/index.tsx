@@ -106,7 +106,13 @@ const { cart, removeProduct, updateProductAmount } = useCart();
               <strong>R$ {product.price*product.amount}</strong>
             </td>
             <td>
-
+            <button
+                type="button"
+                data-testid="remove-product"
+                onClick={() => handleRemoveProduct(product.id)}
+              >
+                <MdDelete size={20} />
+              </button>
             </td>
           </tr>
           )}
